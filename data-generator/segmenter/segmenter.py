@@ -21,7 +21,7 @@ def init():
     global device, ISNetDIS, normalize, im_preprocess, hypar, net
 
     if not os.path.exists("segmenter/saved_models"):
-        os.mkdir("./segmenter/saved_models")
+        os.makedirs("./segmenter/saved_models")
         hf_hub_download(
             repo_id="NimaBoscarino/IS-Net_DIS-general-use",
             filename="isnet-general-use.pth",
